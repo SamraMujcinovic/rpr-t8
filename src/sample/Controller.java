@@ -73,14 +73,14 @@ public class Controller implements Initializable {
         myThread.start();
     }
 
-    public void Prekini(ActionEvent actionEvent){
-        prekini.setDisable(false);
-        trazi.setDisable(false);
-    }
-
     public void prekidacZaPretrazivanje(boolean vrijednost) {
         trazi.setDisable(vrijednost);
         prekini.setDisable(!vrijednost);
+    }
+
+    public void prekini(ActionEvent actionEvent) {
+        prekini.setDisable(false);
+        trazi.setDisable(false);
     }
 
     public class Finder implements Runnable{
